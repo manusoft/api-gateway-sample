@@ -5,11 +5,13 @@ VisualStudioVersion = 17.10.35027.167
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{C3E62B16-20B6-44C9-BEF4-510A1B378DCF}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Gateway", "src\Gateway\Gateway.csproj", "{2B903E17-638B-4D1A-95C7-4F8C6B9354C6}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Gateway", "src\Gateway\Gateway.csproj", "{2B903E17-638B-4D1A-95C7-4F8C6B9354C6}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Weather", "src\Weather\Weather.csproj", "{7E1E0427-E96D-47F7-907D-902862330698}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Weather", "src\Weather\Weather.csproj", "{7E1E0427-E96D-47F7-907D-902862330698}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Identity", "src\Identity\Identity.csproj", "{906F38EC-6D0D-4B18-8EDC-A53A73813084}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Identity", "src\Identity\Identity.csproj", "{906F38EC-6D0D-4B18-8EDC-A53A73813084}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Shared", "src\Shared\Shared.csproj", "{B8F6B2A6-53F9-4E55-9AF6-EEF91616EEEB}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -29,6 +31,10 @@ Global
 		{906F38EC-6D0D-4B18-8EDC-A53A73813084}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{906F38EC-6D0D-4B18-8EDC-A53A73813084}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{906F38EC-6D0D-4B18-8EDC-A53A73813084}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B8F6B2A6-53F9-4E55-9AF6-EEF91616EEEB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B8F6B2A6-53F9-4E55-9AF6-EEF91616EEEB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B8F6B2A6-53F9-4E55-9AF6-EEF91616EEEB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B8F6B2A6-53F9-4E55-9AF6-EEF91616EEEB}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -37,6 +43,7 @@ Global
 		{2B903E17-638B-4D1A-95C7-4F8C6B9354C6} = {C3E62B16-20B6-44C9-BEF4-510A1B378DCF}
 		{7E1E0427-E96D-47F7-907D-902862330698} = {C3E62B16-20B6-44C9-BEF4-510A1B378DCF}
 		{906F38EC-6D0D-4B18-8EDC-A53A73813084} = {C3E62B16-20B6-44C9-BEF4-510A1B378DCF}
+		{B8F6B2A6-53F9-4E55-9AF6-EEF91616EEEB} = {C3E62B16-20B6-44C9-BEF4-510A1B378DCF}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {354112DB-3494-42B7-839D-19299AEE2187}
