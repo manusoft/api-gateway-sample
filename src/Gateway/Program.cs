@@ -17,12 +17,11 @@ builder.Services.AddCors(options =>
 
 var app = builder.Build();
 
-// Configure the HTTP request pipeline.
-
 app.UseCors();
 
 app.UseHttpsRedirection();
 
+app.UseMiddleware<TokenCheckerMiddleware>();
 app.UseMiddleware<InterceptionMiddleware>();
 
 app.UseAuthorization();

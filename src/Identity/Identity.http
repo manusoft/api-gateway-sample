@@ -1,6 +1,6 @@
 @Identity_HostAddress = http://localhost:5239
 
-GET {{Identity_HostAddress}}/weatherforecast/
+GET {{Identity_HostAddress}}/identity/
 Accept: application/json
 
 ###
