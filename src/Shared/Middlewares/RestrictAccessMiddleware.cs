@@ -1,6 +1,6 @@
 ﻿using Microsoft.AspNetCore.Http;
 
-namespace Shared;
+namespace Shared.Middlewares;
 
 public class RestrictAccessMiddleware(RequestDelegate next)
 {
