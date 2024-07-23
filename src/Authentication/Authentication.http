@@ -1,0 +1,6 @@
+@Authentication_HostAddress = http://localhost:5227
+
+GET {{Authentication_HostAddress}}/authentication/
+Accept: application/json
+
+###
