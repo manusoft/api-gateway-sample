@@ -1,4 +1,14 @@
 # API-GATEWAY-SAMPLE
+One gateway API calls multiple APIs
+
+``` http
+GET https://localhost:7000/
+GET https://localhost:7000/api/user
+GET https://localhost:7000/api/weather
+GET https://localhost:7000/api/aggregate
+POST https://localhost:7000/api/account/{email}/{password}
+GET https://localhost:7000/api/account/{email}/{password}
+```
 
 ## 1. Gateway Project
 
@@ -10,6 +20,22 @@
   <PackageReference Include="Ocelot.Cache.CacheManager" Version="23.3.3" />
 </ItemGroup>
 ```
+
+#### launchSettings.json
+``` json
+...
+"https": {
+      "commandName": "Project",
+      "dotnetRunMessages": true,
+      "launchBrowser": true,
+      "launchUrl": "",
+      "applicationUrl": "https://localhost:7000;http://localhost:5275",
+      "environmentVariables": {
+        "ASPNETCORE_ENVIRONMENT": "Development"
+      }
+...
+```
+
 #### ocelot.json
 ``` json
 {
@@ -279,6 +305,32 @@ public class RestrictAccessMiddleware(RequestDelegate next)
 }
 ```
 ## 3. Identity Project
+#### launchSettings.json
+``` json
+...
+ "http": {
+      "commandName": "Project",
+      "dotnetRunMessages": true,
+      "launchBrowser": true,
+      "launchUrl": "swagger",
+      "applicationUrl": "http://localhost:7001",
+      "environmentVariables": {
+        "ASPNETCORE_ENVIRONMENT": "Development"
+      }
+    },
+"https": {
+      "commandName": "Project",
+      "dotnetRunMessages": true,
+      "launchBrowser": true,
+      "launchUrl": "swagger",
+      "applicationUrl": "https://localhost:7242;http://localhost:7001",
+      "environmentVariables": {
+        "ASPNETCORE_ENVIRONMENT": "Development"
+      }
+    },
+...
+```
+
 #### Program.cs
 ``` csharp
 ...
@@ -287,6 +339,32 @@ app.UseMiddleware<RestrictAccessMiddleware>();
 ```
 
 ## 4. Weather Project
+#### launchSettings.json
+``` json
+...
+ "http": {
+      "commandName": "Project",
+      "dotnetRunMessages": true,
+      "launchBrowser": true,
+      "launchUrl": "swagger",
+      "applicationUrl": "http://localhost:7002",
+      "environmentVariables": {
+        "ASPNETCORE_ENVIRONMENT": "Development"
+      }
+    },
+"https": {
+      "commandName": "Project",
+      "dotnetRunMessages": true,
+      "launchBrowser": true,
+      "launchUrl": "swagger",
+      "applicationUrl": "https://localhost:7194;http://localhost:7002",
+      "environmentVariables": {
+        "ASPNETCORE_ENVIRONMENT": "Development"
+      }
+    },
+...
+```
+
 #### Program.cs
 ``` csharp
 ...
@@ -295,6 +373,33 @@ app.UseMiddleware<RestrictAccessMiddleware>();
 ```
 
 ## 5. Authetication Project
+#### launchSettings.json
+``` json
+...
+ "http": {
+      "commandName": "Project",
+      "dotnetRunMessages": true,
+      "launchBrowser": true,
+      "launchUrl": "swagger",
+      "applicationUrl": "http://localhost:7003",
+      "environmentVariables": {
+        "ASPNETCORE_ENVIRONMENT": "Development"
+      }
+    },
+"https": {
+      "commandName": "Project",
+      "dotnetRunMessages": true,
+      "launchBrowser": true,
+      "launchUrl": "swagger",
+      "applicationUrl": "https://localhost:7246;http://localhost:7003",
+      "environmentVariables": {
+        "ASPNETCORE_ENVIRONMENT": "Development"
+      }
+    },
+...
+```
+
+
 #### AppSettings.json
 ``` json
 ...
