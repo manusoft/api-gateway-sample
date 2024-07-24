@@ -61,7 +61,7 @@
         "PeriodTimespan": 6,
         "Limit": 2
       },
-      "Key": "WeatherSearvice"
+      "Key": "WeatherService"
     },
     {
       "DownstreamPathTemplate": "/api/account/{email}/{password}",
@@ -80,7 +80,7 @@
     {
       "RouteKeys": [
         "UserService",
-        "WeatherSearvice"
+        "WeatherService"
       ],
       "UpstreamPathTemplate": "/api/aggregate"
     }
