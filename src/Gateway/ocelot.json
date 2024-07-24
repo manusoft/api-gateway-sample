@@ -10,7 +10,21 @@
         }
       ],
       "UpstreamPathTemplate": "/api/user",
-      "UpstreamHttpMethod": [ "GET", "POST", "PUT", "DELETE" ]
+      "UpstreamHttpMethod": [ "GET", "POST", "PUT", "DELETE" ],
+      "FileCacheOptions": {
+        "TtlSeconds": 60,
+        "Region": "default",
+        "Header": "OC-Caching-Control",
+        "EnableContentHashing": false
+      },
+      "RateLimitOptions": {
+        "ClientWhitelist": [],
+        "EnableRateLimiting": true,
+        "Period": "60s",
+        "PeriodTimespan": 6,
+        "Limit": 2
+      },
+      "Key": "UserService"
     },
     {
       "DownstreamPathTemplate": "/api/weatherforecast",
@@ -22,7 +36,21 @@
         }
       ],
       "UpstreamPathTemplate": "/api/weatherforecast",
-      "UpstreamHttpMethod": [ "GET", "POST", "PUT", "DELETE" ]
+      "UpstreamHttpMethod": [ "GET", "POST", "PUT", "DELETE" ],
+      "FileCacheOptions": {
+        "TtlSeconds": 60,
+        "Region": "default",
+        "Header": "OC-Caching-Control",
+        "EnableContentHashing": false
+      },
+      "RateLimitOptions": {
+        "ClientWhitelist": [],
+        "EnableRateLimiting": true,
+        "Period": "60s",
+        "PeriodTimespan": 6,
+        "Limit": 2
+      },
+      "Key": "WeatherSearvice"
     },
     {
       "DownstreamPathTemplate": "/api/account/{email}/{password}",
@@ -35,6 +63,15 @@
       ],
       "UpstreamPathTemplate": "/api/account/{email}/{password}",
       "UpstreamHttpMethod": [ "GET", "POST", "PUT", "DELETE" ]
+    }
+  ],
+  "Aggregates": [
+    {
+      "RouteKeys": [
+        "UserService",
+        "WeatherSearvice"
+      ],
+      "UpstreamPathTemplate": "/api/aggregate"
     }
   ],
   "GlobalConfiguration": {
