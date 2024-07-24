@@ -7,6 +7,14 @@
         {
           "Host": "localhost",
           "Port": 7001
+        },
+        {
+          "Host": "localhost",
+          "Port": 7004
+        },
+        {
+          "Host": "localhost",
+          "Port": 7005
         }
       ],
       "UpstreamPathTemplate": "/api/user",
@@ -24,7 +32,10 @@
         "PeriodTimespan": 6,
         "Limit": 2
       },
-      "Key": "UserService"
+      "Key": "UserService",
+      "LoadBalancerOptions": {
+        "Type": "LeastConnection"
+      }
     },
     {
       "DownstreamPathTemplate": "/api/weatherforecast",
